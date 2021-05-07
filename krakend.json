@@ -21,7 +21,7 @@
       "querystring_params": ["*"],
       "backend": [
         {
-          "host": "http://localhost:8081",
+          "host": "http://endpoint-springboot:8081",
           "url_pattern": "/test2",
           "extra_config": {
             "github.com/devopsfaith/krakend-httpcache": {}
