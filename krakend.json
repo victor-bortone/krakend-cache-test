@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "endpoints": [
+    {
+      "endpoint": "/test",
+      "method": "GET",
+      "querystring_params": ["*"],
+      "backend": [
+        {
+          "host": "http://endpoint-springboot:8081",
+          "url_pattern": "/test",
+          "extra_config": {
+            "github.com/devopsfaith/krakend-httpcache": {}
+          }
+        }
+      ]
+    },
+    {
+      "endpoint": "/test2",
+      "method": "GET",
+      "querystring_params": ["*"],
+      "backend": [
+        {
+          "host": "http://localhost:8081",
+          "url_pattern": "/test2",
+          "extra_config": {
+            "github.com/devopsfaith/krakend-httpcache": {}
+          }
+        }
+      ]
+    }
+  ]
+}

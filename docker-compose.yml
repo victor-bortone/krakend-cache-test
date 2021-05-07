@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  endpoint-springboot:
+    build: endpoint-springboot
+    ports:
+      - "8081:8081"
+  krakend:
+    image: devopsfaith/krakend:latest
+    volumes:
+      - ./krakend.json:/etc/krakend/krakend.json
+    ports:
+      - "8080:8080"
+    depends_on:
+      - endpoint-springboot
